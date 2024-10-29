@@ -1,0 +1,13 @@
+.skillsWrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.skillsList {
+  min-width: 320px;
+}
+
+.skillsBanner {
+  max-width: 500px;
+}

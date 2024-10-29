@@ -3,6 +3,10 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+* {
+  margin: 0;
+  padding: 0;
+}
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
@@ -14,6 +18,7 @@ body {
   margin: 0;
   font-family: 'Oxanium', Arial, Helvetica, sans-serif;
   letter-spacing: 0.01rem;
+  line-height: 1.4;
 } /**
   * Render the `main` element consistently in IE.
   */
@@ -26,16 +31,18 @@ main {
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
-} /* Grouping content
-  ========================================================================== */ /**
-  * 1. Add the correct box sizing in Firefox.
-  * 2. Show the overflow in Edge and IE.
-  */
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+}
 ul,
 ol {
   list-style: none;
-  padding: 0;
-  margin: 0;
 }
 hr {
   box-sizing: content-box; /* 1 */
@@ -53,9 +60,9 @@ pre {
  * Remove the gray background on active links in IE 10.
  */
 a {
+  display: inline-block;
   background-color: transparent;
   text-decoration: none;
-  color: #000;
 } /**
  * 1. Remove the bottom border in Chrome 57-
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
@@ -250,4 +257,31 @@ template {
 }
 [flex] {
   display: flex;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color2);
+  border-radius: 25px;
+  border: 2px solid var(--color1);
+}
+::-webkit-scrollbar-thumb:hover {
+  cursor: grab;
+}
+::-webkit-scrollbar-thumb:active {
+  cursor: grabbing;
+}
+::selection {
+  color: #fafafa;
+  background-color: rgba(151, 113, 221, 0.726);
+}
+.text {
+  color: var(--color1);
+  mix-blend-mode: difference;
 }

@@ -9,8 +9,8 @@ import { gsap } from 'gsap';
 
 const pages = {
   Home: <Home />,
-  ContactsPage: <Contacts />,
   AboutMePage: <AboutMe />,
+  ContactsPage: <Contacts />,
 };
 
 export const Header = () => {
@@ -59,17 +59,19 @@ export const Header = () => {
   return (
     <div className={styles['header-container']} ref={containerRef}>
       <div className={styles['header-buttons']}>
-        <Button label="Main" onClick={() => handlePageChange('Home')} />{' '}
+        <Button label="Me" onClick={() => handlePageChange('Home')} />
         <Button
-          label="Contacts"
-          onClick={() => handlePageChange('ContactsPage')}
-        />{' '}
-        <Button
-          label="About Me"
+          label="My skills"
           onClick={() => handlePageChange('AboutMePage')}
-        />{' '}
+        />
+        <Button
+          label="My contacts"
+          onClick={() => handlePageChange('ContactsPage')}
+        />
       </div>
-      <div ref={contentRef}>{pages[currentPage]}</div>
+      <div className={styles['content']} ref={contentRef}>
+        {pages[currentPage]}
+      </div>
     </div>
   );
 };
