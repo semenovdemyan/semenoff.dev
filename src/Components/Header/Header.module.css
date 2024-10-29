@@ -1,0 +1,10 @@
+.header-container {
+  display: flex; /* Используем Flexbox */
+  flex-direction: column; /* Вертикальное расположение элементов */
+  align-items: center; /* Центрирование по горизонтали */
+  height: 100vh; /* Занимает всю высоту экрана */
+}
+
+.header-buttons {
+  margin-bottom: 20px; /* Отступ между кнопками и контентом */
+}

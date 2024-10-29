@@ -1,30 +1,16 @@
-import { useState } from 'react';
-import { Home } from '../../Pages/PageHome/Home';
-import { Contacts } from '../../Pages/PageContacts/Contacts';
-import { AboutMe } from '../../Pages/PageAboutMe/AboutMe';
+import React from 'react';
+import './Button.css';
 
-const pages = {
-  HomePage: <Home />,
-  ContactsPage: <Contacts />,
-  AboutMePage: <AboutMe />,
-};
+interface ButtonProps {
+  label: string; // Свойство для текста кнопки
+  onClick?: () => void;
+}
 
-const Button = () => {
-  const [currentPage, setCurrentPage] =
-    useState<keyof typeof pages>('HomePage');
-
+const Button: React.FC<ButtonProps> = ({ label, onClick }) => {
   return (
-    <div>
-      {Object.keys(pages).map((page) => (
-        <button
-          key={page}
-          onClick={() => setCurrentPage(page as keyof typeof pages)}
-        >
-          {page}
-        </button>
-      ))}
-      {pages[currentPage]}
-    </div>
+    <button className="btn" onClick={onClick}>
+      {label}
+    </button>
   );
 };
 

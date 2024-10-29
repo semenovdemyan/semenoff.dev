@@ -1,29 +1,9 @@
-import React, { useState } from 'react';
-import { Home } from './Pages/PageHome/Home';
-import { AboutMe } from './Pages/PageAboutMe/AboutMe';
-import { Contacts } from './Pages/PageContacts/Contacts';
+import { Header } from './Components/Header/Header';
 
-type Page = 'Home' | 'AboutMe' | 'Contacts';
-
-const pages: Record<Page, React.ReactNode> = {
-  Home: <Home />,
-  AboutMe: <AboutMe />,
-  Contacts: <Contacts />,
-};
-
-const App: React.FC = () => {
-  const [currentPage, setCurrentPage] = useState<Page>('Home');
-
+export const App: React.FC = () => {
   return (
-    <div>
-      {Object.keys(pages).map((page) => (
-        <button key={page} onClick={() => setCurrentPage(page as Page)}>
-          {page}
-        </button>
-      ))}
-      {pages[currentPage]}
+    <div className="container">
+      <Header />
     </div>
   );
 };
-
-export default App;
