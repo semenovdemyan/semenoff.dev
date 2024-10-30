@@ -1,20 +1,20 @@
 import { useState, useRef } from 'react';
-import { Home } from '../../Pages/PageHome/Home';
+import { Me } from '../../Pages/PageMe/Me';
 import { Contacts } from '../../Pages/PageContacts/Contacts';
-import { AboutMe } from '../../Pages/PageAboutMe/AboutMe';
+import { MySkills } from '../../Pages/PageMySkills/MySkills';
 import './Header.module.css';
 import Button from '../Button/Button';
 import styles from './Header.module.css';
 import { gsap } from 'gsap';
 
 const pages = {
-  Home: <Home />,
-  AboutMePage: <AboutMe />,
+  Me: <Me />,
+  MySkillsPage: <MySkills />,
   ContactsPage: <Contacts />,
 };
 
 export const Header = () => {
-  const [currentPage, setCurrentPage] = useState<keyof typeof pages>('Home');
+  const [currentPage, setCurrentPage] = useState<keyof typeof pages>('Me');
   const contentRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -26,43 +26,26 @@ export const Header = () => {
       // Анимация исчезновения контента
       gsap.to(contentRef.current, {
         opacity: 0,
-        duration: 0.5,
+        duration: 0.3,
         onComplete: () => {
           setCurrentPage(page);
 
-          // Смена цвета фона
-          // gsap.to(containerRef.current, {
-          //   backgroundColor: getRandomColor(),
-          //   duration: 0.5,
-          // });
-
-          // Анимация появления нового контента
           gsap.to(contentRef.current, {
             opacity: 1,
-            duration: 0.5,
+            duration: 0.3,
           });
         },
       });
     }
   };
 
-  // Функция для генерации случайного цвета
-  // const getRandomColor = () => {
-  //   const letters = '0123456789ABCDEF';
-  //   let color = '#';
-  //   for (let i = 0; i < 6; i++) {
-  //     color += letters[Math.floor(Math.random() * 16)];
-  //   }
-  //   return color;
-  // };
-
   return (
     <div className={styles['header-container']} ref={containerRef}>
       <div className={styles['header-buttons']}>
-        <Button label="Me" onClick={() => handlePageChange('Home')} />
+        <Button label="Me" onClick={() => handlePageChange('Me')} />
         <Button
           label="My skills"
-          onClick={() => handlePageChange('AboutMePage')}
+          onClick={() => handlePageChange('MySkillsPage')}
         />
         <Button
           label="My contacts"

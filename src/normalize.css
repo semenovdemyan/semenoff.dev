@@ -15,10 +15,9 @@ html {
  * Remove the margin in all browsers.
  */
 body {
-  margin: 0;
-  font-family: 'Oxanium', Arial, Helvetica, sans-serif;
-  letter-spacing: 0.01rem;
-  line-height: 1.4;
+  font-family: 'Oxanium', 'Inter', Arial, Helvetica, sans-serif;
+  letter-spacing: 0.02rem;
+  line-height: 1.6;
 } /**
   * Render the `main` element consistently in IE.
   */
@@ -279,7 +278,7 @@ template {
 }
 ::selection {
   color: #fafafa;
-  background-color: rgba(151, 113, 221, 0.726);
+  background-color: var(--color3);
 }
 .text {
   color: var(--color1);

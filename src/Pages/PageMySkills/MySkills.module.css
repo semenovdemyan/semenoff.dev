@@ -5,9 +5,9 @@
 }
 
 .skillsList {
-  min-width: 320px;
+  min-width: 200px;
 }
 
 .skillsBanner {
-  max-width: 500px;
+  width: auto;
 }
