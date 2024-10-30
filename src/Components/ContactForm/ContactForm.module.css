@@ -19,6 +19,6 @@ input,
 textarea {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #aaecaf;
   border-radius: 8px; /* Скругленные углы для полей ввода */
 }

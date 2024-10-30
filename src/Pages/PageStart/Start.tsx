@@ -1,5 +1,4 @@
 import './Start.module.css';
-
 export const Start = () => {
   return (
     <div>

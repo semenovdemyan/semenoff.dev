@@ -47,7 +47,6 @@ const ContactForm: React.FC = () => {
             id="message"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            required
           />
         </div>
         <button type="submit">Submit</button>

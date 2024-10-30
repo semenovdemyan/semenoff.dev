@@ -14,9 +14,11 @@ a {
 }
 
 .header-buttons {
+  position: fixed;
   color: var(--color2);
   margin-bottom: 20px; /* Отступ между кнопками и контентом */
 }
 .content {
   max-width: 1440px;
+  padding-top: 60px;
 }
