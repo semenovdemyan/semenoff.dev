@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react';
+import { Start } from '../../Pages/PageStart/Start';
 import { Me } from '../../Pages/PageMe/Me';
 import { Contacts } from '../../Pages/PageContacts/Contacts';
 import { MySkills } from '../../Pages/PageMySkills/MySkills';
@@ -8,13 +9,14 @@ import styles from './Header.module.css';
 import { gsap } from 'gsap';
 
 const pages = {
+  Start: <Start />,
   Me: <Me />,
-  MySkillsPage: <MySkills />,
-  ContactsPage: <Contacts />,
+  MySkills: <MySkills />,
+  Contacts: <Contacts />,
 };
 
 export const Header = () => {
-  const [currentPage, setCurrentPage] = useState<keyof typeof pages>('Me');
+  const [currentPage, setCurrentPage] = useState<keyof typeof pages>('Start');
   const contentRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -45,11 +47,11 @@ export const Header = () => {
         <Button label="Me" onClick={() => handlePageChange('Me')} />
         <Button
           label="My skills"
-          onClick={() => handlePageChange('MySkillsPage')}
+          onClick={() => handlePageChange('MySkills')}
         />
         <Button
           label="My contacts"
-          onClick={() => handlePageChange('ContactsPage')}
+          onClick={() => handlePageChange('Contacts')}
         />
       </div>
       <div className={styles['content']} ref={contentRef}>
