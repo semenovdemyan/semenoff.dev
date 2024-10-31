@@ -1,8 +1,8 @@
 .formContainer {
-  width: 400px; /* Ширина формы */
+  width: 100%;
   padding: 20px;
   background-color: rgba(110, 77, 201, 0.795);
-  border-radius: 15px; /* Скругленные углы */
+  border-radius: 15px;
   box-shadow: 0px 10px 50px 25px rgba(91, 46, 214, 0.795);
 }
 
@@ -20,5 +20,5 @@ textarea {
   width: 100%;
   padding: 10px;
   border: 1px solid #aaecaf;
-  border-radius: 8px; /* Скругленные углы для полей ввода */
+  border-radius: 8px;
 }

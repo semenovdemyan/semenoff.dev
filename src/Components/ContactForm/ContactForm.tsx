@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styles from './ContactForm.module.css';
+import Button from '../Button/Button';
 
 const ContactForm: React.FC = () => {
   const [name, setName] = useState('');
@@ -49,7 +50,7 @@ const ContactForm: React.FC = () => {
             onChange={(e) => setMessage(e.target.value)}
           />
         </div>
-        <button type="submit">Submit</button>
+        <Button label="Submit" onClick={() => SubmitEvent} />
       </form>
     </div>
   );

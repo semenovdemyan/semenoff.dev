@@ -7,18 +7,17 @@ a {
 
 .header-container {
   color: var(--color2);
-  display: flex; /* Используем Flexbox */
-  flex-direction: column; /* Вертикальное расположение элементов */
-  align-items: center; /* Центрирование по горизонтали */
-  height: 100vh; /* Занимает всю высоту экрана */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
 }
 
 .header-buttons {
   position: fixed;
   color: var(--color2);
-  margin-bottom: 20px; /* Отступ между кнопками и контентом */
+  margin-bottom: 20px;
 }
 .content {
-  max-width: 1440px;
   padding-top: 60px;
 }
