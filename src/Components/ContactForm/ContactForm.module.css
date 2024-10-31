@@ -1,13 +1,25 @@
 .formContainer {
-  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  color: var(--color1);
+  max-width: 380px;
+  min-height: 380px;
   padding: 20px;
-  background-color: rgba(110, 77, 201, 0.795);
+  background-color: var(--color2);
   border-radius: 15px;
-  box-shadow: 0px 10px 50px 25px rgba(91, 46, 214, 0.795);
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  -webkit-box-shadow: 0px 0px 40px 10px var(--color2);
+  -moz-box-shadow: 0px 0px 40px 10px var(--color2);
+  box-shadow: 0px 0px 40px 10px var(--color2);
+  overflow: hidden;
 }
-
+.formHeader {
+  margin-bottom: 25px;
+}
 .formGroup {
   margin-bottom: 15px;
+  width: 100%;
 }
 
 label {
@@ -17,8 +29,52 @@ label {
 
 input,
 textarea {
-  width: 100%;
+  cursor: pointer;
+  width: contain;
   padding: 10px;
-  border: 1px solid #aaecaf;
+  border: 1px solid var(--color2-active);
+  background-color: var(--color1-active);
   border-radius: 8px;
+}
+.submitBtn Button {
+  color: var(--color1);
+  font-weight: 600;
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid var(--color1);
+  background-color: var(--color1-active);
+  color: var(--color2);
+}
+input:valid {
+  background-color: var(--color1-active);
+  color: var(--color2);
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.popup button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.popup button:hover {
+  background-color: #0056b3;
 }
