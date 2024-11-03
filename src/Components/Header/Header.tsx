@@ -7,21 +7,22 @@ import './Header.module.css';
 import { Button } from '../Button/Button';
 import styles from './Header.module.css';
 import { gsap } from 'gsap';
-
-const pages = {
-  Start: <Start />,
-  Me: <Me />,
-  MySkills: <MySkills />,
-  Contacts: <Contacts />,
-};
+import { LangToggle } from '../../Components/LangToggle/Langtoggle';
 
 export const Header = () => {
+  const [lang, setLang] = useState<'en' | 'ru'>('ru');
   const [currentPage, setCurrentPage] = useState<keyof typeof pages>('Start');
   const contentRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
+  const pages = {
+    Start: <Start lang={lang} />,
+    Me: <Me lang={lang} />,
+    MySkills: <MySkills lang={lang} />,
+    Contacts: <Contacts lang={lang} />,
+  };
+
   const handlePageChange = (page: keyof typeof pages) => {
-    // Проверка: если текущая страница уже выбрана, ничего не делаем
     if (currentPage === page) return;
 
     if (contentRef.current && containerRef.current) {
@@ -57,6 +58,7 @@ export const Header = () => {
       <div className={styles['content']} ref={contentRef}>
         {pages[currentPage]}
       </div>
+      <LangToggle lang={lang} setLang={setLang} />
     </div>
   );
 };

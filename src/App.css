@@ -16,5 +16,5 @@
   overflow: hidden;
 }
 .video {
-  min-width: 120vw;
+  min-width: 100%;
 }

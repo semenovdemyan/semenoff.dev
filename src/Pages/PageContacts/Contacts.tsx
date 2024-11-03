@@ -1,10 +1,11 @@
 import React from 'react';
 import './Contacts.module.css';
 import ContactForm from '../../Components/ContactForm/ContactForm';
-export const Contacts: React.FC = () => {
+
+export const Contacts: React.FC<{ lang: 'ru' | 'en' }> = ({ lang }) => {
   return (
     <div>
-      <h1>Contacts</h1>
+      {lang === 'ru' ? <h1>Контакты</h1> : <h1>Contacts</h1>}
       <ul>
         <li>
           <a href="mailto:semenovdemyan@gmail.com">semenovdemyan@gmail.com</a>
