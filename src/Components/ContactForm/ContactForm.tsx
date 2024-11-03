@@ -70,7 +70,7 @@ const ContactForm: React.FC = () => {
         {popup.visible && (
           <div className={styles.popup}>
             <p>{popup.message}</p>
-            <button onClick={closePopup}>X</button>
+            <button onClick={closePopup}>✘</button>
           </div>
         )}
         <div className={styles.submitBtn}>

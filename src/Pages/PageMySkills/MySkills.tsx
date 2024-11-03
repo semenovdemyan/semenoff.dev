@@ -47,18 +47,12 @@ export const MySkills: React.FC<MySkillsProps> = ({ lang }) => {
           <div>
             {lang === 'ru' ? (
               <div>
-                Сейчас мой сайт не выглядит так, как я его задумывал.
-                <br />
-                <br />
                 Пока перевод сайта "по кнопке" и мобильная версия находятся в
                 разработке, вы можете навести курсор на навык, чтобы узнать о
                 его полезности для веб-разработчика.
               </div>
             ) : (
               <div>
-                Right now, my site doesn’t look quite the way I envisioned it.
-                <br />
-                <br />
                 While the site translation "by button" and the mobile version
                 are still in development, you can hover over the skill to learn
                 about its usefulness for a web developer.

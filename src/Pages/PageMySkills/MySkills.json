@@ -20,9 +20,14 @@
     "descriptionEng": "TypeScript is useful because it adds static typing to JavaScript. This helps to find errors at the development stage, making the code more reliable. TypeScript is easier to work with in large projects because it improves code readability and maintainability. It also supports modern JavaScript features and provides tools for autocomplete and refactoring. TypeScript helps developers create better and more structured applications."
   },
   {
-    "skillName": "React JS",
+    "skillName": "React.js",
     "descriptionRu": "React предлагает ряд преимуществ: компонентный подход для удобства разработки, виртуальный DOM для повышения производительности, простое управление состоянием, широкая экосистема библиотек и активное сообщество, что делает его идеальным для создания быстрых и интерактивных веб-приложений.",
     "descriptionEng": "React offers a number of advantages: a component-based approach for ease of development, a virtual DOM for improved performance, easy state management, a broad ecosystem of libraries, and an active community, making it ideal for building fast and interactive web applications."
+  },
+  {
+    "skillName": "Node.js",
+    "descriptionRu": "Node.js позволяет создавать серверные приложения, которые могут обрабатывать запросы от пользователей, взаимодействовать с базами данных и выполнять другие задачи. У Node.js есть своя система управления пакетами, называемая npm (Node Package Manager), которая позволяет легко устанавливать и использовать сторонние библиотеки и модули.",
+    "descriptionEng": "Node.js allows you to create server applications that can handle user requests, interact with databases, and perform other tasks. Node.js has its own package management system called npm (Node Package Manager), which makes it easy to install and use third-party libraries and modules."
   },
   {
     "skillName": "Vite, Webpack",
@@ -41,7 +46,7 @@
   },
   {
     "skillName": "Chat GPT",
-    "descriptionRu": "ChatGPT - это определённо мастхэв для современного разработчика, ускоряет процесс разработки веб-приложений, снимая часть рутинных задач и предоставляя быстрое решение вопросов, помощь в написании кода и объяснения концепций. Он может генерировать идеи, создавать примеры кода и давать советы по оптимизации, что позволяет разработчикам сосредоточиться на более важных задачах и сократить время на поиски информации.",
-    "descriptionEng": "ChatGPT is definitely a must-have for modern developers. It speeds up the process of web application development by taking care of routine tasks and providing quick solutions to questions, assistance with coding, and explanations of concepts. It can generate ideas, create code examples, and give optimization tips, allowing developers to focus on more important tasks and reduce the time spent searching for information."
+    "descriptionRu": "Chat GPT - это, определённо, мастхэв для современного разработчика, ведь он ускоряет процесс разработки веб-приложений, снимая часть рутинных задач и предоставляя быстрое решение вопросов, помощь в написании кода и объяснения концепций. Он может генерировать идеи, создавать примеры кода и давать советы по оптимизации, что позволяет разработчикам сосредоточиться на более важных задачах и сократить время на поиски информации.",
+    "descriptionEng": "Chat GPT is definitely a must-have for modern developers. It speeds up the process of web application development by taking care of routine tasks and providing quick solutions to questions, assistance with coding, and explanations of concepts. It can generate ideas, create code examples, and give optimization tips, allowing developers to focus on more important tasks and reduce the time spent searching for information."
   }
 ]

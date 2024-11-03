@@ -1,6 +1,9 @@
 import './Me.module.css';
 import styles from './Me.module.css';
 import imgUrl from '../../assets/images/me.jpg';
+import { lazy, Suspense } from 'react';
+
+const LazyImage = lazy(() => import('../../Components/LazyImg'));
 
 export const Me: React.FC<{ lang: 'ru' | 'en' }> = ({ lang }) => {
   return (
@@ -38,7 +41,7 @@ export const Me: React.FC<{ lang: 'ru' | 'en' }> = ({ lang }) => {
       ) : (
         <div className={styles['textContainer']}>
           <p>
-            Hi, my name is Demyan! <br /> <br /> I am a web developer from Saint
+            Hi! My name is Demian. <br /> <br /> I am a web developer from Saint
             Petersburg who wants to see more user-friendly and beautiful
             interfaces in the world. My journey into web development began when
             one of my friends showed me what could be done with just a code
@@ -51,12 +54,14 @@ export const Me: React.FC<{ lang: 'ru' | 'en' }> = ({ lang }) => {
             animation. <br /> <br /> When I'm not writing code, I love to travel
             to cities or ski down snowy slopes, exploring new places, which
             helps me stay inspired and find fresh ideas for my projects. <br />{' '}
-            <br /> Let's make something cool together! 😎
+            <br /> Let's make something cool together! 🧊😎🧊
           </p>
         </div>
       )}
       <div className={styles['photoContainer']}>
-        <img className={styles['photo']} src={imgUrl} alt="my photo" />
+        <Suspense fallback={<div>Loading image...</div>}>
+          <LazyImage className={styles['photo']} src={imgUrl} alt="my photo" />
+        </Suspense>
       </div>
     </div>
   );
