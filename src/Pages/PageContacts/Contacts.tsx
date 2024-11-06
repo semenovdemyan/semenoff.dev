@@ -23,7 +23,7 @@ export const Contacts: React.FC<{ lang: 'ru' | 'en' }> = ({ lang }) => {
           </a>
         </li>
       </ul>
-      <ContactForm />
+      <ContactForm lang={'ru'} />
     </div>
   );
 };

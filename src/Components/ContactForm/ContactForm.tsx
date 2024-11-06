@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styles from './ContactForm.module.css';
 import { Button } from '../Button/Button';
 
-const ContactForm: React.FC = () => {
+const ContactForm: React.FC<{ lang: 'ru' | 'en' }> = ({ lang }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
@@ -14,13 +14,24 @@ const ContactForm: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Логика отправки формы (например, API)
-    const isSuccess = true; // Здесь можно заменить на реальную логику
+    const isSuccess = true; // Тут будет ваша логика отправки формы
 
     if (isSuccess) {
-      setPopup({ visible: true, message: 'Форма успешно отправлена!' });
+      setPopup({
+        visible: true,
+        message:
+          lang === 'ru'
+            ? 'Форма успешно отправлена!'
+            : 'Form submitted successfully!',
+      });
     } else {
-      setPopup({ visible: true, message: 'Ошибка при отправке формы.' });
+      setPopup({
+        visible: true,
+        message:
+          lang === 'ru'
+            ? 'Ошибка при отправке формы.'
+            : 'Error while submitting the form.',
+      });
     }
 
     // Очистка полей
@@ -35,12 +46,16 @@ const ContactForm: React.FC = () => {
 
   return (
     <div className={styles.formContainer}>
-      <h2 className={styles.formHeader}>Got some questions?</h2>
+      <h2 className={styles.formHeader}>
+        {lang === 'ru' ? 'Есть вопросы?' : 'Got some questions?'}
+      </h2>
       <form onSubmit={handleSubmit}>
         <div className={styles.formGroup}>
-          <label htmlFor="name">Your name</label>
+          <label htmlFor="name">
+            {lang === 'ru' ? 'Ваше имя' : 'Your name'}
+          </label>
           <input
-            placeholder="text your name"
+            placeholder={lang === 'ru' ? 'введите ваше имя' : 'enter your name'}
             type="text"
             id="name"
             value={name}
@@ -49,7 +64,9 @@ const ContactForm: React.FC = () => {
           />
         </div>
         <div className={styles.formGroup}>
-          <label htmlFor="email">Your email</label>
+          <label htmlFor="email">
+            {lang === 'ru' ? 'Ваш email' : 'Your email'}
+          </label>
           <input
             placeholder="example@gmail.com"
             type="email"
@@ -60,7 +77,9 @@ const ContactForm: React.FC = () => {
           />
         </div>
         <div className={styles.formGroup}>
-          <label htmlFor="message">Message</label>
+          <label htmlFor="message">
+            {lang === 'ru' ? 'Сообщение' : 'Message'}
+          </label>
           <textarea
             id="message"
             value={message}
@@ -74,7 +93,7 @@ const ContactForm: React.FC = () => {
           </div>
         )}
         <div className={styles.submitBtn}>
-          <Button label="Submit" />
+          <Button label={lang === 'ru' ? 'Отправить' : 'Submit'} />
         </div>
       </form>
     </div>

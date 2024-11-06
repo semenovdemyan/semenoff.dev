@@ -45,20 +45,24 @@ export const Header = () => {
   return (
     <div className={styles['header-container']} ref={containerRef}>
       <div className={styles['header-buttons']}>
-        <Button label="Me" onClick={() => handlePageChange('Me')} />
-        <Button
-          label="My skills"
-          onClick={() => handlePageChange('MySkills')}
-        />
-        <Button
-          label="My contacts"
-          onClick={() => handlePageChange('Contacts')}
-        />
+        <span>
+          <Button label="Me" onClick={() => handlePageChange('Me')} />
+          <Button
+            label="My skills"
+            onClick={() => handlePageChange('MySkills')}
+          />
+          <Button
+            label="My contacts"
+            onClick={() => handlePageChange('Contacts')}
+          />
+        </span>
+        <span>
+          <LangToggle lang={lang} setLang={setLang} />
+        </span>
       </div>
       <div className={styles['content']} ref={contentRef}>
         {pages[currentPage]}
       </div>
-      <LangToggle lang={lang} setLang={setLang} />
     </div>
   );
 };
