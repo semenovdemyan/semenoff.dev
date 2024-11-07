@@ -1,0 +1,17 @@
+/* +++ < 768 +++ */
+.under-developement {
+  text-align: center;
+  display: none; /* По умолчанию скрываем элемент */
+  padding: 20px;
+  background-color: #f7f7f7;
+  color: #333;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .under-developement {
+    display: block; /* Показываем только на мобильных устройствах (менее 768px) */
+  }
+}
+/* --- < 768 --- */

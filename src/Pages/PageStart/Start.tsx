@@ -1,11 +1,23 @@
 import './Start.module.css';
+
 export const Start: React.FC<{ lang: 'ru' | 'en' }> = ({ lang }) => {
   return (
-    <div>
+    <div className="flex">
       {lang === 'ru' ? (
-        <h1>Стартовая страница ещё в разработке</h1>
+        <h1 className="under-developement">
+          Сайт ещё находится в разработке.
+          <br />
+          Мобильная версия может отображаться некорректно.
+          <br />
+          <br />
+          Для продолжения выберите раздел
+        </h1>
       ) : (
-        <h1>Start page is still in development yet.</h1>
+        <h1 className="under-developement">
+          Start page and mobile version are still in development.
+          <br />
+          Choose tab to continue.
+        </h1>
       )}
     </div>
   );

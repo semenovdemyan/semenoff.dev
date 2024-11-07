@@ -4,8 +4,8 @@ import react from '@vitejs/plugin-react';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/my-vite-cv/', // укажите имя вашего репозитория
+  base: '/my-vite-cv/',
   build: {
-    outDir: 'dist', // папка для сборки
+    outDir: 'dist',
   },
 });
