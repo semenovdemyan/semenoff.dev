@@ -1,17 +1,20 @@
 /* +++ < 768 +++ */
-.under-developement {
-  text-align: center;
+.underDevelopement {
   display: none; /* По умолчанию скрываем элемент */
   padding: 20px;
-  background-color: #f7f7f7;
-  color: #333;
   font-size: 1.5rem;
   text-align: center;
+  font-weight: 300;
 }
 
 @media (max-width: 768px) {
-  .under-developement {
+  .underDevelopement {
     display: block; /* Показываем только на мобильных устройствах (менее 768px) */
   }
 }
 /* --- < 768 --- */
+.tester {
+  font-weight: 300;
+  margin: 100px 0;
+  text-align: center;
+}
