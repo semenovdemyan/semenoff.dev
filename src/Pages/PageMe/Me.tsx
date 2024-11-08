@@ -1,10 +1,11 @@
+import React from 'react';
 import './Me.module.css';
 import styles from './Me.module.css';
 import imgUrl from '../../assets/images/me.jpg';
 import { lazy, Suspense } from 'react';
 
 // Lazy loading для изображения
-const LazyImage = lazy(() => import('../../Components/LazyImg'));
+const LazyImg = lazy(() => import('../../Components/LazyImg'));
 
 // Хранение контента на разных языках
 const content = {
@@ -79,8 +80,10 @@ export const Me: React.FC<{ lang: 'ru' | 'en' }> = ({ lang }) => {
       </div>
 
       <div className={styles['photoContainer']}>
-        <Suspense fallback={<div className={styles['photo']}></div>}>
-          <LazyImage className={styles['photo']} src={imgUrl} alt="my photo" />
+        <Suspense>
+          <div className={styles['blurLoad']}>
+            <LazyImg className={styles['photo']} src={imgUrl} alt="my photo" />
+          </div>
         </Suspense>
       </div>
     </div>

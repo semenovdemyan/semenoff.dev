@@ -1,6 +1,7 @@
 /* +++ < 768 +++ */
+
 .underDevelopement {
-  display: none; /* По умолчанию скрываем элемент */
+  display: none;
   padding: 20px;
   font-size: 1.5rem;
   text-align: center;
@@ -9,10 +10,30 @@
 
 @media (max-width: 768px) {
   .underDevelopement {
-    display: block; /* Показываем только на мобильных устройствах (менее 768px) */
+    display: block;
   }
 }
+
 /* --- < 768 --- */
+
+/* +++ > 768 +++ */
+
+.desktopUnderDevelopement {
+  display: none;
+  padding: 20px;
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 300;
+}
+
+@media (min-width: 768px) {
+  .desktopUnderDevelopement {
+    display: block;
+  }
+}
+
+/* --- > 768 --- */
+
 .tester {
   font-weight: 300;
   margin: 100px 0;

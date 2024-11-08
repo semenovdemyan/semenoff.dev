@@ -17,9 +17,9 @@
 }
 
 .main-wrapper {
+  background-color: var(--color1);
   width: 100%;
   height: max-content;
-  overflow: hidden;
 }
 
 .video {
@@ -29,5 +29,4 @@
   transform: rotate(180deg);
   z-index: 1;
   min-height: 100%;
-  overflow: hidden;
 }
