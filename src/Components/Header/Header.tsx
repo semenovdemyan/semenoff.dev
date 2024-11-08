@@ -1,3 +1,4 @@
+// Header.tsx
 import { useState, useRef } from 'react';
 import { Start } from '../../Pages/PageStart/Start';
 import { Me } from '../../Pages/PageMe/Me';
@@ -10,8 +11,10 @@ import { gsap } from 'gsap';
 import { LangToggle } from '../../Components/LangToggle/Langtoggle';
 
 export const Header = () => {
-  const [lang, setLang] = useState<'en' | 'ru'>('ru');
-  const [currentPage, setCurrentPage] = useState<keyof typeof pages>('Start');
+  const [lang, setLang] = useState<'en' | 'ru'>('ru'); // Управление языком
+  const [currentPage, setCurrentPage] = useState<
+    'Start' | 'Me' | 'MySkills' | 'Contacts'
+  >('Start');
   const contentRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -42,17 +45,29 @@ export const Header = () => {
     }
   };
 
+  // Отладочная информация
+  console.log('Current language in Header:', lang);
+
   return (
     <div className={styles['header-container']} ref={containerRef}>
       <div className={styles['header-buttons']}>
         <span>
-          <Button label="Me" onClick={() => handlePageChange('Me')} />
           <Button
-            label="My skills"
+            lang={lang} // Передаем lang в Button
+            labelRu="Обо мне"
+            labelEn="Me"
+            onClick={() => handlePageChange('Me')}
+          />
+          <Button
+            lang={lang}
+            labelRu="Мои навыки"
+            labelEn="My skills"
             onClick={() => handlePageChange('MySkills')}
           />
           <Button
-            label="My contacts"
+            lang={lang}
+            labelRu="Контакты"
+            labelEn="My contacts"
             onClick={() => handlePageChange('Contacts')}
           />
         </span>

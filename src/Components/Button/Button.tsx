@@ -1,24 +1,32 @@
 import './Button.css';
 
 interface ButtonProps {
-  label: string;
+  labelRu?: string;
+  labelEn?: string;
+  lang: 'en' | 'ru';
   onClick?: () => void;
   onSubmit?: () => void;
 }
 
-export const Button: React.FC<ButtonProps> = ({ label, onClick, onSubmit }) => {
+export const Button: React.FC<ButtonProps> = ({
+  lang,
+  labelRu,
+  labelEn,
+  onClick,
+  onSubmit,
+}) => {
   const handleClick = () => {
     if (onSubmit) {
-      onSubmit(); // Вызов onSubmit, если он передан
+      onSubmit();
     }
     if (onClick) {
-      onClick(); // Вызов onClick, если он передан
+      onClick();
     }
   };
 
   return (
     <button className="btn" onClick={handleClick}>
-      {label}
+      {lang === 'ru' ? labelRu : labelEn}
     </button>
   );
 };

@@ -1,8 +1,13 @@
 import React, { useState } from 'react';
 import styles from './ContactForm.module.css';
-import { Button } from '../Button/Button';
+import { Button } from '../Button/Button'; // Убедитесь, что Button импортируется корректно
 
-const ContactForm: React.FC<{ lang: 'ru' | 'en' }> = ({ lang }) => {
+// Интерфейс для пропсов компонента ContactForm
+interface ContactFormProps {
+  lang: 'ru' | 'en';
+}
+
+export const ContactForm: React.FC<ContactFormProps> = ({ lang }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
@@ -14,7 +19,7 @@ const ContactForm: React.FC<{ lang: 'ru' | 'en' }> = ({ lang }) => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const isSuccess = true; // Тут будет ваша логика отправки формы
+    const isSuccess = true; // Логика отправки формы
 
     if (isSuccess) {
       setPopup({
@@ -93,11 +98,9 @@ const ContactForm: React.FC<{ lang: 'ru' | 'en' }> = ({ lang }) => {
           </div>
         )}
         <div className={styles.submitBtn}>
-          <Button label={lang === 'ru' ? 'Отправить' : 'Submit'} />
+          <Button lang={lang} labelRu="Отправить" labelEn="Submit" />
         </div>
       </form>
     </div>
   );
 };
-
-export default ContactForm;

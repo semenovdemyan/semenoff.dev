@@ -20,6 +20,7 @@ a {
   margin-bottom: 20px;
   display: flex;
   gap: auto;
+  flex-wrap: wrap;
 }
 .content {
   padding: 60px 100px;

@@ -73,8 +73,8 @@ input:valid {
 
 .popup button {
   margin-left: 10px;
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   background-color: var(--color2);
   color: var(--color1);
   border: none;

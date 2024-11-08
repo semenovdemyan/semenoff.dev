@@ -13,25 +13,10 @@ export const Start: React.FC<{ lang: 'ru' | 'en' }> = ({ lang }) => {
             Мобильная версия может отображаться некорректно.
             <br />
             <br />
-            Для продолжения, выберите раздел/
+            Для продолжения, выберите раздел.
           </h1>
         ) : (
           <h1 className={styles.underDevelopement}>
-            Start page and mobile version are still in development.
-            <br />
-            Choose tab to continue.
-          </h1>
-        )}
-
-        {lang === 'ru' ? (
-          <h1 className={styles.desktopUnderDevelopement}>
-            Сайт ещё находится в разработке.
-            <br />
-            <br />
-            Для продолжения выберите раздел
-          </h1>
-        ) : (
-          <h1 className={styles.desktopUnderDevelopement}>
             Start page and mobile version are still in development.
             <br />
             Choose tab to continue.
