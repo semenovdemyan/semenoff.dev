@@ -5,9 +5,8 @@ import { ContactForm } from '../../Components/ContactForm/ContactForm';
 export const Contacts: React.FC<{ lang: 'ru' | 'en' }> = ({ lang }) => {
   return (
     <div>
-      <div>{lang === 'ru' ? <h1>Мои контакты</h1> : <h1>My contacts</h1>}</div>
       <div className={styles.contactsContainer}>
-        <div>
+        <div className={styles.contactsContentWrapper}>
           <ul>
             <li>
               <a href="mailto:semenovdemyan@gmail.com">
@@ -37,7 +36,7 @@ export const Contacts: React.FC<{ lang: 'ru' | 'en' }> = ({ lang }) => {
             </li>
           </ul>
         </div>
-        <div>
+        <div className={styles.contactsFormWrapper}>
           <ContactForm lang={lang} />
         </div>
       </div>

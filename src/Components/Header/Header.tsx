@@ -66,7 +66,7 @@ export const Header = () => {
           />
           <Button
             lang={lang}
-            labelRu="Контакты"
+            labelRu="Мои контакты"
             labelEn="My contacts"
             onClick={() => handlePageChange('Contacts')}
           />
