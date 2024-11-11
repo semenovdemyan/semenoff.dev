@@ -1,5 +1,5 @@
 :root {
-  --color1: #222;
+  --color1: #111;
   --color1-active: #3b3b3b;
   --color2: #d1ffd4c7;
   --color2-active: #92d896c7;
@@ -10,25 +10,24 @@
 
 .container {
   width: 100%;
-  padding: 15px 0px;
   background-color: var(--color1);
   color: var(--color2);
-  overflow: hidden;
-  width: 100%;
+  height: 100%;
 }
 
 .main-wrapper {
   background-color: var(--color1);
   width: 100%;
-  height: max-content;
+  max-height: 120vh;
+  overflow: hidden;
 }
 
 .video {
+  background-color: var(--color1);
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
-  transform: rotate(180deg);
   z-index: 1;
-  min-height: 100vh;
+  height: 128vh;
 }

@@ -2,7 +2,6 @@
 
 .underDevelopement {
   display: none;
-  padding: 20px;
   font-size: 1.5rem;
   text-align: center;
   font-weight: 300;
@@ -11,28 +10,11 @@
 @media (max-width: 768px) {
   .underDevelopement {
     display: block;
+    position: absolute;
   }
 }
 
 /* --- < 768 --- */
-
-/* +++ > 768 +++ */
-
-.desktopUnderDevelopement {
-  display: none;
-  padding: 20px;
-  font-size: 1.5rem;
-  text-align: center;
-  font-weight: 300;
-}
-
-@media (min-width: 768px) {
-  .desktopUnderDevelopement {
-    display: block;
-  }
-}
-
-/* --- > 768 --- */
 
 .tester {
   font-weight: 300;

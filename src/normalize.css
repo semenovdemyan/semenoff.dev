@@ -99,7 +99,7 @@ textarea {
 button,
 input {
   /* 1 */
-  overflow: visible;
+  overflow: hidden;
 } /**
  * Remove the inheritance of text transform in Edge, Firefox, and IE.
  * 1. Remove the inheritance of text transform in Firefox.
@@ -162,7 +162,7 @@ progress {
  * Remove the default vertical scrollbar in IE 10+.
  */
 textarea {
-  overflow: auto;
+  overflow: hidden;
 } /**
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
@@ -245,8 +245,4 @@ template {
 ::selection {
   color: #fafafa;
   background-color: var(--color3);
-}
-.text {
-  color: var(--color1);
-  mix-blend-mode: difference;
 }
