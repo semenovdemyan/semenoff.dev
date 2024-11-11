@@ -5,18 +5,19 @@
 }
 
 .skillsList li h2 {
-  width: 260px;
+  line-height: .8;
+  padding: 10px;
+  width: 205px;
   font-size: 30px;
   transition: 0.3s ease;
   cursor: pointer;
 }
 .skillsList li h2:hover,
 .skillsList li h2:focus {
-  padding-left: 25px;
-  padding-bottom: 10px;
+  padding: 0 0 20px 25px;
 }
 
 .skillsText {
-  max-width: 68%;
+  max-width: 70%;
   text-align: center;
 }

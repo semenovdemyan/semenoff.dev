@@ -17,7 +17,6 @@ a {
 .header-buttons {
   position: fixed;
   color: var(--color2);
-  margin-bottom: 20px;
   display: flex;
   justify-content: space-between;
   width: 100%;
