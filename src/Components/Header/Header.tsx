@@ -44,15 +44,12 @@ export const Header = () => {
     }
   };
 
-  // Отладочная информация
-  console.log('Current language in Header:', lang);
-
   return (
     <div className={styles['header-container']} ref={containerRef}>
       <div className={styles['header-buttons']}>
         <span>
           <Button
-            lang={lang} // Передаем lang в Button
+            lang={lang}
             labelRu="Обо мне"
             labelEn="Me"
             onClick={() => handlePageChange('Me')}

@@ -15,11 +15,12 @@ a {
 }
 
 .header-buttons {
+  left: 55px;
   position: fixed;
   color: var(--color2);
-  display: flex;
   justify-content: space-between;
   width: 100%;
+  align-items: center;
 }
 .header-buttons nav {
   margin: 0 auto;

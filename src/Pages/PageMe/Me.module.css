@@ -21,6 +21,7 @@
   overflow: hidden;
   background-size: cover;
   background-position: center;
+  min-width: 280px;
 }
 .blurLoad {
   background-size: cover;
