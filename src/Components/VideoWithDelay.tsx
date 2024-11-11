@@ -20,25 +20,28 @@ export const VideoWithDelay: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    if (videoRef.current) {
+    const videoElement = videoRef.current; // Сохраняем значение ref в переменную
+
+    if (videoElement) {
       // Добавляем слушатель события окончания видео
-      videoRef.current.addEventListener('ended', handleVideoEnd);
+      videoElement.addEventListener('ended', handleVideoEnd);
     }
 
+    // Функция очистки
     return () => {
-      if (videoRef.current) {
-        videoRef.current.removeEventListener('ended', handleVideoEnd);
+      if (videoElement) {
+        videoElement.removeEventListener('ended', handleVideoEnd);
       }
     };
-  }, []);
+  }, []); // useEffect должен зависеть только от пустого массива, так как мы работаем с видео
 
   const handleVideoEnd = () => {
     if (containerRef.current) {
       // Плавное исчезновение контейнера с помощью GSAP
       gsap.to(containerRef.current, {
         opacity: 0,
-        duration: 1, // Увеличиваем продолжительность для более плавного эффекта
-        ease: 'power1.out', // Добавляем easing для плавности
+        duration: 1.5, // Увеличиваем продолжительность для более плавного эффекта
+        ease: 'power2.out', // Добавляем easing для плавности
       });
     }
   };

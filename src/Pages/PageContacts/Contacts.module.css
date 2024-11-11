@@ -1,6 +1,13 @@
 .contactsContainer {
-  display: flex;
-  flex-direction: column;
   width: 100%;
-  gap: 6em;
+  padding: 100px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 165px;
+}
+
+@media (max-width: 1024px) {
+  /* Стили, которые будут применяться при ширине экрана меньше 1024px */
+  .contactsContainer {
+  }
 }

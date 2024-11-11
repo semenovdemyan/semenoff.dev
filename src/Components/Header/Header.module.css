@@ -33,5 +33,5 @@ a {
 }
 .content {
   height: 100vh;
-  padding: 124px 70px;
+  padding: 124px 70px 0;
 }

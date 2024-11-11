@@ -5,29 +5,27 @@
   --color2-active: #92d896c7;
   --color3: #0efcd4a1;
   --color3-active: #92d896c7;
-  --color4: #;
 }
 
 .container {
   width: 100%;
-  background-color: var(--color1);
   color: var(--color2);
   height: 100%;
 }
 
 .main-wrapper {
-  background-color: var(--color1);
   width: 100%;
   max-height: 120vh;
   overflow: hidden;
 }
 
 .video {
-  background-color: var(--color1);
   position: absolute;
-  top: 0;
   right: 0;
-  bottom: 0;
+  top: 0;
   z-index: 1;
-  height: 128vh;
+  height: 115vh;
+}
+#root {
+  padding: 0 70px;
 }
