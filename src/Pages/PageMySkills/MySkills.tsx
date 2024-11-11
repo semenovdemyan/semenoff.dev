@@ -40,7 +40,7 @@ export const MySkills: React.FC<MySkillsProps> = ({ lang }) => {
   return (
     <div style={{ fontSize: '30px' }} className={styles['skillsWrapper']}>
       {renderSkills(skills, lang, setHoveredText)}
-      <div className={styles['skillsBanner']}>
+      <div className={styles['skillsText']}>
         {hoveredText ? (
           hoveredText
         ) : (
@@ -48,7 +48,7 @@ export const MySkills: React.FC<MySkillsProps> = ({ lang }) => {
             {lang === 'ru' ? (
               <div>
                 Пока мобильная версия и контент находятся в разработке, вы
-                можете навести курсор на навык, чтобы узнать о его полезности
+                можете навести курсор на навык, чтобы узнать о его пользе
                 для веб-разработчика.
               </div>
             ) : (

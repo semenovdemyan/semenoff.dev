@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import videoUrl from '../assets/video/video.mp4';
-
+import styles from '../App.module.css';
 const VideoWithDelay: React.FC = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -21,7 +21,7 @@ const VideoWithDelay: React.FC = () => {
       ref={videoRef}
       muted
       src={videoUrl}
-      className="video"
+      className={styles.video}
       autoPlay={isPlaying}
       preload="auto"
     />

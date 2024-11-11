@@ -19,10 +19,17 @@ a {
   color: var(--color2);
   margin-bottom: 20px;
   display: flex;
-  gap: auto;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+.header-buttons nav {
+  margin: 0 auto;
+}
+
+.toggle {
+  position: fixed;
+  right: 70px;
 }
 .content {
-  padding: 60px 100px;
-  width: 100%;
+  padding: 124px 70px;
 }

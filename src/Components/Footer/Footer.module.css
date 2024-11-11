@@ -1,0 +1,18 @@
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color2);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.footer-wrapper {
+  display: flex;
+  text-align: center;
+  gap: 5px;
+}

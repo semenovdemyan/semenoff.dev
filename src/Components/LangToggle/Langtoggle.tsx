@@ -1,4 +1,4 @@
-import './LangToggle.css';
+import styles from './LangToggle.module.css';
 
 interface LangToggleProps {
   lang: 'en' | 'ru';
@@ -11,7 +11,7 @@ export const LangToggle: React.FC<LangToggleProps> = ({ lang, setLang }) => {
   };
 
   return (
-    <div className="lang-toggle">
+    <div className={styles.langToggle}>
       <button style={{ minWidth: '50px' }} onClick={langToggle}>
         {lang === 'ru' ? 'RU' : 'ENG'}
       </button>

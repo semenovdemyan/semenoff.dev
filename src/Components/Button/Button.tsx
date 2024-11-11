@@ -1,4 +1,4 @@
-import './Button.css';
+import styles from './Button.module.css';
 
 interface ButtonProps {
   labelRu?: string;
@@ -25,7 +25,7 @@ export const Button: React.FC<ButtonProps> = ({
   };
 
   return (
-    <button className="btn" onClick={handleClick}>
+    <button className={styles.btn} onClick={handleClick}>
       {lang === 'ru' ? labelRu : labelEn}
     </button>
   );
