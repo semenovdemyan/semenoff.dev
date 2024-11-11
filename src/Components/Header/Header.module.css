@@ -12,6 +12,7 @@ a {
   align-items: center;
   z-index: 100;
   position: relative;
+  max-height: 100vh;
 }
 
 .header-buttons {
@@ -31,5 +32,6 @@ a {
   right: 70px;
 }
 .content {
+  min-height: 100vh;
   padding: 124px 70px;
 }
