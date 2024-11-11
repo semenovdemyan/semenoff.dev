@@ -4,6 +4,7 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 * {
+  cursor: default;
   margin: 0;
   padding: 0;
 }

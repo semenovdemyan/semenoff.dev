@@ -1,7 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
 import videoUrl from '../assets/video/video.mp4';
+import useScreenSize from '../hooks/HookScreen';
 
-const VideoWithDelay: React.FC = () => {
+export const VideoWithDelay: React.FC = () => {
+  const screenSize = useScreenSize(); // Получаем текущий размер экрана через хук
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -15,7 +17,10 @@ const VideoWithDelay: React.FC = () => {
 
     return () => clearTimeout(timer); // Очистка таймера при размонтировании компонента
   }, []);
-
+  // Если экран меньше 768px (мобильный или планшет), скрываем компонент
+  if (screenSize < '--mobile') {
+    return null; // Возвращаем null, чтобы не рендерить компонент
+  }
   return (
     <video
       ref={videoRef}
@@ -23,9 +28,6 @@ const VideoWithDelay: React.FC = () => {
       src={videoUrl}
       className="video"
       autoPlay={isPlaying}
-      preload="auto"
     />
   );
 };
-
-export default VideoWithDelay;

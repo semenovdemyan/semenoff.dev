@@ -3,17 +3,51 @@
   --color1-active: #3b3b3b;
   --color2: #d1ffd4c7;
   --color2-active: #92d896c7;
-  --color3: #5e10f0cc;
+  --color3: #10e1f088;
   --color3-active: #92d896c7;
-  --color4: #;
+}
+
+:root {
+  --mobile-font-size: 12px;
+  --pad-font-size: 14px;
+  --desktop-s-font-size: 16px;
+  --desktop-m-font-size: 18px;
+  --desktop-l-font-size: 20px;
+}
+
+/* Стили для разных экранных размеров */
+:root {
+  --font-size: var(--desktop-m-font-size);
+}
+
+:root[data-screen-size='--mobile'] {
+  --font-size: var(--mobile-font-size);
+}
+
+:root[data-screen-size='--pad'] {
+  --font-size: var(--pad-font-size);
+}
+
+:root[data-screen-size='--desktop-s'] {
+  --font-size: var(--desktop-s-font-size);
+}
+
+:root[data-screen-size='--desktop-m'] {
+  --font-size: var(--desktop-m-font-size);
+}
+
+:root[data-screen-size='--desktop-l'] {
+  --font-size: var(--desktop-l-font-size);
 }
 
 .container {
+  font-size: var(--font-size);
   padding: 15px 0px;
   background-color: var(--color1);
   color: var(--color2);
   overflow: hidden;
   width: 100%;
+  max-width: 100%;
 }
 
 .main-wrapper {
@@ -26,6 +60,7 @@
   position: absolute;
   top: 0;
   right: 0;
+  bottom: 0;
   transform: rotate(180deg);
   z-index: 1;
   min-height: 100%;
