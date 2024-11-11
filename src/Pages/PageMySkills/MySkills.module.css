@@ -2,15 +2,21 @@
   display: flex;
   justify-content: space-between;
   gap: 40px;
-  padding: 50px 0;
 }
 
 .skillsList li h2 {
-  width: 220px;
+  width: 260px;
   font-size: 30px;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+.skillsList li h2:hover,
+.skillsList li h2:focus {
+  padding-left: 25px;
+  padding-bottom: 10px;
 }
 
-.skillsBanner {
-  width: auto;
+.skillsText {
+  max-width: 68%;
   text-align: center;
 }

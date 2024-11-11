@@ -4,7 +4,6 @@ import { Start } from '../../Pages/PageStart/Start';
 import { Me } from '../../Pages/PageMe/Me';
 import { Contacts } from '../../Pages/PageContacts/Contacts';
 import { MySkills } from '../../Pages/PageMySkills/MySkills';
-import './Header.module.css';
 import { Button } from '../Button/Button';
 import styles from './Header.module.css';
 import { gsap } from 'gsap';
@@ -71,7 +70,7 @@ export const Header = () => {
             onClick={() => handlePageChange('Contacts')}
           />
         </span>
-        <span>
+        <span className={styles.toggle}>
           <LangToggle lang={lang} setLang={setLang} />
         </span>
       </div>
