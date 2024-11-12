@@ -1,37 +1,32 @@
-a {
-  color: var(--color2);
-  border-bottom: 2px solid;
-  padding-bottom: 2px;
-  margin-bottom: 15px;
-}
-
 .header-container {
+  margin-top: 10px;
   color: var(--color2);
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%; /* Это обеспечит ширину контейнера */
   z-index: 1000;
   position: relative;
-  min-height: 600px;
 }
 
 .header-buttons {
-  left: 55px;
-  position: fixed;
-  color: var(--color2);
-  justify-content: space-between;
-  width: 100%;
+  display: flex;
+  justify-content: center; /* Центрирует элементы внутри */
+  width: 100%; /* Это обеспечит всю ширину для центрирования */
   align-items: center;
+  position: fixed; /* Задаёт фиксированное положение для всей панели */
+  top: 0; /* Пример размещения сверху */
+  color: var(--color2);
 }
+
 .header-buttons nav {
-  margin: 0 auto;
+  display: flex;
+  gap: 20px; /* Расстояние между кнопками */
+  align-items: center;
+  justify-content: center;
 }
 
 .toggle {
-  position: fixed;
+  position: absolute; /* Разместите его относительно контейнера */
   right: 70px;
-}
-.content {
-  height: 100vh;
-  padding: 124px 70px 0;
 }

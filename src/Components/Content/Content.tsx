@@ -5,6 +5,7 @@ import { Contacts } from '../../Pages/PageContacts/Contacts';
 import { MySkills } from '../../Pages/PageMySkills/MySkills';
 import { gsap } from 'gsap';
 import styles from './Content.module.css';
+
 interface ContentProps {
   currentPage: 'Start' | 'Me' | 'MySkills' | 'Contacts';
   lang: 'en' | 'ru';

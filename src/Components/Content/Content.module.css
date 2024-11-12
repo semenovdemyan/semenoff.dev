@@ -1,1 +1,6 @@
 
+.content {
+  position: relative;
+  z-index: 222;
+  padding: 124px 70px 0;
+}

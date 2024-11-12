@@ -1,13 +1,11 @@
 .formContainer {
   flex-wrap: wrap;
   color: var(--color1);
-  max-width: 380px;
-  min-height: 380px;
+  max-width: 320px;
+  min-height: 320px;
   padding: 20px;
   background-color: var(--color2);
-  border-radius: 15px;
-  border-top-right-radius: 30px;
-  border-bottom-left-radius: 30px;
+  border-radius: 20px;
   -webkit-box-shadow: 0 0 20px 3px var(--color2);
   -moz-box-shadow: 0 0 20px 3px var(--color2);
   box-shadow: 0 0 20px 3px var(--color2);

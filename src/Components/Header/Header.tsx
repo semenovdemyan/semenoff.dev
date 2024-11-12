@@ -1,78 +1,43 @@
-// Header.tsx
-import { useState, useRef } from 'react';
-import { Start } from '../../Pages/PageStart/Start';
-import { Me } from '../../Pages/PageMe/Me';
-import { Contacts } from '../../Pages/PageContacts/Contacts';
-import { MySkills } from '../../Pages/PageMySkills/MySkills';
+import { FC } from 'react';
 import { Button } from '../Button/Button';
 import styles from './Header.module.css';
-import { gsap } from 'gsap';
 import { LangToggle } from '../../Components/LangToggle/Langtoggle';
 
-export const Header = () => {
-  const [lang, setLang] = useState<'en' | 'ru'>('ru'); // Управление языком
-  const [currentPage, setCurrentPage] = useState<
-    'Start' | 'Me' | 'MySkills' | 'Contacts'
-  >('Start');
-  const contentRef = useRef<HTMLDivElement>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
+interface HeaderProps {
+  lang: 'en' | 'ru';
+  setLang: React.Dispatch<React.SetStateAction<'en' | 'ru'>>;
+  setCurrentPage: React.Dispatch<
+    React.SetStateAction<'Start' | 'Me' | 'MySkills' | 'Contacts'>
+  >;
+}
 
-  const pages = {
-    Start: <Start lang={lang} />,
-    Me: <Me lang={lang} />,
-    MySkills: <MySkills lang={lang} />,
-    Contacts: <Contacts lang={lang} />,
-  };
-
-  const handlePageChange = (page: keyof typeof pages) => {
-    if (currentPage === page) return;
-
-    if (contentRef.current && containerRef.current) {
-      // Анимация исчезновения контента
-      gsap.to(contentRef.current, {
-        opacity: 0,
-        duration: 0.3,
-        onComplete: () => {
-          setCurrentPage(page);
-
-          gsap.to(contentRef.current, {
-            opacity: 1,
-            duration: 0.3,
-          });
-        },
-      });
-    }
-  };
-
+export const Header: FC<HeaderProps> = ({ lang, setLang, setCurrentPage }) => {
   return (
-    <div className={styles['header-container']} ref={containerRef}>
+    <div className={styles['header-container']}>
       <div className={styles['header-buttons']}>
-        <span>
+        <nav>
           <Button
             lang={lang}
             labelRu="Обо мне"
             labelEn="Me"
-            onClick={() => handlePageChange('Me')}
+            onClick={() => setCurrentPage('Me')}
           />
           <Button
             lang={lang}
             labelRu="Мои навыки"
             labelEn="My skills"
-            onClick={() => handlePageChange('MySkills')}
+            onClick={() => setCurrentPage('MySkills')}
           />
           <Button
             lang={lang}
             labelRu="Мои контакты"
             labelEn="My contacts"
-            onClick={() => handlePageChange('Contacts')}
+            onClick={() => setCurrentPage('Contacts')}
           />
-        </span>
+        </nav>
         <span className={styles.toggle}>
           <LangToggle lang={lang} setLang={setLang} />
         </span>
-      </div>
-      <div className={styles['content']} ref={contentRef}>
-        {pages[currentPage]}
       </div>
     </div>
   );
