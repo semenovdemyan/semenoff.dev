@@ -1,0 +1,58 @@
+.scene {
+  pointer-events: none;
+  position: fixed; /* Фиксируем элемент внутри viewport */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  perspective: 1200px; /* Увеличили глубину для более выраженного 3D-эффекта */
+  width: 768px;
+  height: 500px;
+}
+
+.cube {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transform: rotateX(15deg) rotateY(15deg);
+}
+
+.cube__face {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #ddd;
+  box-shadow: 0px 4px 10px rgba(212, 46, 46, 0.3); /* Добавили тень для объема */
+  border-radius: 8px; /* Добавили скругленные углы */
+}
+
+.cube__face--1 {
+  transform: rotateY(0deg) translateZ(75px);
+}
+.cube__face--2 {
+  transform: rotateY(90deg) translateZ(75px);
+}
+.cube__face--3 {
+  transform: rotateY(180deg) translateZ(75px);
+}
+.cube__face--4 {
+  transform: rotateY(-90deg) translateZ(75px);
+}
+.cube__face--5 {
+  transform: rotateX(90deg) translateZ(75px);
+}
+.cube__face--6 {
+  transform: rotateX(-90deg) translateZ(75px);
+}
+
+.cube__square {
+  width: 100%;
+  height: 100%;
+  background: var(--color1);
+  border: 2px solid var(--color2);
+  border-radius: 5px; /* Добавили скругление для более мягкого вида */
+}

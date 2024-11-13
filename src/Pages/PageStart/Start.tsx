@@ -1,13 +1,15 @@
 // import { HooksTester } from '../../hooks/HooksTester';
 // import { AnimatedIcons } from '../../Components/AnimatedIcons/AnimatedIcons';
-// import { RadioSlider } from '../../Components/RadioSlider/RadioSlider';
+import { RadioSlider } from '../../Components/RadioSlider/RadioSlider';
+import { Cube } from '../../Components/Cube/Cube';
 import React from 'react';
 
 export const Start: React.FC<{ lang?: 'ru' | 'en' }> = () => {
   return (
     <>
-      {/* <RadioSlider /> */}
+      <RadioSlider />
       {/* <AnimatedIcons /> */}
+      <Cube />
     </>
     // <div hidden>
     //   <span>
