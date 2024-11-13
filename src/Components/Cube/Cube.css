@@ -1,12 +1,15 @@
 .scene {
   pointer-events: none;
-  position: fixed; /* Фиксируем элемент внутри viewport */
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   perspective: 1200px; /* Увеличили глубину для более выраженного 3D-эффекта */
   width: 768px;
   height: 500px;
+  @media (max-width: 450px) {
+    display: none;
+  }
 }
 
 .cube {

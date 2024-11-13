@@ -1,9 +1,10 @@
 import styles from './Button.module.css';
 
 interface ButtonProps {
+  label?: object;
   labelRu?: string;
   labelEn?: string;
-  lang: 'en' | 'ru';
+  lang?: 'en' | 'ru';
   onClick?: () => void;
   onSubmit?: () => void;
 }
