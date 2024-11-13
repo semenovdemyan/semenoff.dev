@@ -1,4 +1,4 @@
-/* +++ < 768 +++ */
+/* +++ < 768 +++
 
 .underDevelopement {
   display: none;
@@ -14,10 +14,10 @@
   }
 }
 
-/* --- < 768 --- */
+--- < 768 ---
 
 .tester {
   font-weight: 300;
   margin: 100px 0;
   text-align: center;
-}
+} */

@@ -1,0 +1,74 @@
+.radioContainer {
+  overflow: hidden;
+  display: flex;
+  height: 600px;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.card {
+  margin: 0 10px;
+  width: 60px;
+  background-size: cover;
+  cursor: pointer;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  transition: 0.4s ease-in-out;
+  box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
+}
+
+.card[for='c1'] {
+  margin: 0 10px 0 0;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+
+.card[for='c6'] {
+  margin: 0 0 0 10px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.card .row {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.card .row .icon {
+  background: #223;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+}
+
+.radioInput {
+  display: none;
+}
+
+.radioInput:checked + label {
+  width: 400px;
+}
+
+.radioInput:checked + label .descr {
+  opacity: 1 !important;
+}
+
+.card[for='c1'],
+.card[for='c2'],
+.card[for='c3'],
+.card[for='c4'],
+.card[for='c5'],
+.card[for='c6'] {
+  background-image: url('../../assets/images/me.jpg');
+}
+
+.title {
+  width: 100%;
+  line-height: normal;
+  transform: rotate(-90deg);
+  margin: 0 0 0 0;
+  color: var(--color1);
+}

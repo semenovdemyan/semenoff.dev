@@ -225,8 +225,11 @@ template {
   display: flex;
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 15px;
+} */
+::-webkit-scrollbar {
+  display: none;
 }
 ::-webkit-scrollbar-track {
   background: var(--color1);
