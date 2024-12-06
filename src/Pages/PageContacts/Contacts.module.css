@@ -1,51 +1,40 @@
 .contactsContainer {
   align-items: center;
-  justify-content: center; /* Это выровняет содержимое по горизонтали */
+  justify-content: center;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
 }
 
 .contactsWrapper {
-  display: flex; /* Устанавливаем flexbox для внутренних элементов */
-  justify-content: space-between; /* Распределяет элементы по горизонтали */
-  align-items: top; /* Центрирует элементы по вертикали */
-  width: 100%; /* Убедимся, что wrapper занимает всю доступную ширину */
-  max-width: 940px; /* Добавим максимальную ширину для контейнера */
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+  width: 100%;
+  max-width: 940px;
   gap: 30px;
+  padding: 0 20px;
   flex-wrap: wrap;
 }
 
 .contactsFormWrapper,
 .contactsContentWrapper {
   display: inline-block;
+  margin-bottom: 40px;
 }
 
-/* Для случая, когда элементы переходят на новую строку */
-@media (max-width: 1011px) {
-  .contactsFormWrapper {
-    margin-bottom: 40px;
-  }
-  .contactsWrapper {
-    max-width: 420px;
-  }
-  .contactsContentWrapper {
-    width: 100%; /* На мобильных устройствах они занимают всю ширину */
-    text-align: center; /* Центрируем содержимое внутри блоков */
-  }
-}
-
-@media (max-width: 440px) {
+/* @media (max-width: 440px) {
   .contactsFormWrapper {
     max-width: 100%;
   }
-}
+} */
+
 a {
   margin-bottom: 34px;
   color: var(--color2);
   position: relative;
   text-decoration: none;
-  transition: color 0.5s ease; /* Плавный переход цвета */
+  transition: color 0.5s ease;
 }
 
 a::after {
@@ -69,9 +58,9 @@ a:hover::after {
 }
 
 a:active::after {
-  background-color: var(--highlight-color); /* Меняем цвет на при нажатии */
+  background-color: var(--highlight-color);
 }
 
 a:active {
-  color: var(--highlight-color); /* Меняем цвет текста при нажатии */
+  color: var(--highlight-color);
 }

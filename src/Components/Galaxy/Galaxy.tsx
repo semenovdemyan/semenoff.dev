@@ -7,7 +7,6 @@ export const Galaxy: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Запускаем анимацию при монтировании компонента
     const timer = setTimeout(() => {
       if (containerRef.current) {
         gsap.fromTo(

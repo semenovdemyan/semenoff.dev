@@ -2,7 +2,7 @@ import React from 'react';
 
 interface LazyImgProps {
   src: string;
-  alt: string;
+  alt?: string;
   className?: string;
 }
 

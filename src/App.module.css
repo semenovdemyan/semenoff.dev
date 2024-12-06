@@ -27,6 +27,11 @@
   /* height: 115vh; */
   object-fit: cover;
 }
+@media (max-width: 450px) {
+  .video {
+    display: none;
+  }
+}
 #root {
   padding: 0 70px;
 }

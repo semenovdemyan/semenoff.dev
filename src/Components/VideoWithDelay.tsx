@@ -16,7 +16,7 @@ export const VideoWithDelay: React.FC = () => {
       }
     }, 1);
 
-    return () => clearTimeout(timer); // Очистка таймера при размонтировании компонента
+    return () => clearTimeout(timer);
   }, []);
 
   useEffect(() => {

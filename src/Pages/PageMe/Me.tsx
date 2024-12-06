@@ -4,7 +4,6 @@ import styles from './Me.module.css';
 import imgUrl from '../../assets/images/me.jpg';
 import { lazy, Suspense } from 'react';
 
-// Lazy loading для изображения
 const LazyImg = lazy(() => import('../../Components/LazyImg'));
 
 // Хранение контента на разных языках

@@ -1,8 +1,7 @@
-//Icon.tsx
 import React from 'react';
 
 interface IconProps {
-  src: string; // Путь к SVG файлу
+  src: string;
 }
 
 export const Icon: React.FC<IconProps> = ({ src }) => {

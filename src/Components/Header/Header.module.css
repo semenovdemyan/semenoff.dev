@@ -4,29 +4,29 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%; /* Это обеспечит ширину контейнера */
+  width: 100%;
   z-index: 1000;
   position: relative;
 }
 
 .header-buttons {
   display: flex;
-  justify-content: center; /* Центрирует элементы внутри */
-  width: 100%; /* Это обеспечит всю ширину для центрирования */
+  justify-content: center;
+  width: 100%;
   align-items: center;
-  position: fixed; /* Задаёт фиксированное положение для всей панели */
-  top: 0; /* Пример размещения сверху */
+  position: fixed;
+  top: 10px;
   color: var(--color2);
 }
 
 .header-buttons nav {
   display: flex;
-  gap: 20px; /* Расстояние между кнопками */
+  gap: 20px;
   align-items: center;
   justify-content: center;
 }
 
 .toggle {
-  position: absolute; /* Разместите его относительно контейнера */
+  position: absolute;
   right: 70px;
 }
