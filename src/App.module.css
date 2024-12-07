@@ -24,8 +24,12 @@
   right: 0;
   bottom: 0;
   z-index: -1;
-  /* height: 115vh; */
   object-fit: cover;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .video {
+    height: 115vh;
+  }
 }
 @media (max-width: 450px) {
   .video {

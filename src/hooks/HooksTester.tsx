@@ -1,5 +1,5 @@
 import React from 'react';
-import useScreenSize from './HookScreen'; // Импортируем хук
+import { useScreenSize } from './HookScreen'; // Импортируем хук
 
 export const HooksTester: React.FC = () => {
   const screenSize = useScreenSize(); // Получаем текущее состояние экрана

@@ -1,13 +1,13 @@
 .scene {
   pointer-events: none;
   position: fixed;
-  top: 50%;
-  left: 50%;
+  top: 60%;
+  left: 70%;
   transform: translate(-50%, -50%);
-  perspective: 1200px; /* Увеличили глубину для более выраженного 3D-эффекта */
-  width: 768px;
+  perspective: 3200px;
+  width: 700px;
   height: 500px;
-  @media (max-width: 450px) {
+  @media screen and (max-width: 450px) {
     display: none;
   }
 }
@@ -27,29 +27,27 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid #ddd;
-  box-shadow: 0px 4px 10px rgba(212, 46, 46, 0.3); /* Добавили тень для объема */
-  border-radius: 8px; /* Добавили скругленные углы */
+  box-shadow: 0 0 10px 10px var(--color2);
+  border-radius: 8px;
 }
 
 .cube__face--1 {
-  transform: rotateY(0deg) translateZ(75px);
+  transform: rotateY(0deg) translateZ(66px);
 }
 .cube__face--2 {
-  transform: rotateY(90deg) translateZ(75px);
+  transform: rotateY(90deg) translateZ(66px);
 }
 .cube__face--3 {
-  transform: rotateY(180deg) translateZ(75px);
+  transform: rotateY(180deg) translateZ(66px);
 }
 .cube__face--4 {
-  transform: rotateY(-90deg) translateZ(75px);
+  transform: rotateY(-90deg) translateZ(66px);
 }
 .cube__face--5 {
-  transform: rotateX(90deg) translateZ(75px);
+  transform: rotateX(90deg) translateZ(66px);
 }
 .cube__face--6 {
-  transform: rotateX(-90deg) translateZ(75px);
+  transform: rotateX(-90deg) translateZ(66px);
 }
 
 .cube__square {
@@ -57,5 +55,5 @@
   height: 100%;
   background: var(--color1);
   border: 2px solid var(--color2);
-  border-radius: 5px; /* Добавили скругление для более мягкого вида */
+  border-radius: 5px;
 }

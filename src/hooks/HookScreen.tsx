@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 
-// Определим типы для разных состояний
 type ScreenSize =
   | '--mobile' // меньше 440px
   | '--pad' // от 768px до 1024px
@@ -8,7 +7,7 @@ type ScreenSize =
   | '--desktop-m' // от 1440px до 2560px
   | '--desktop-l'; // от 2560px до 3440px
 
-const useScreenSize = () => {
+export const useScreenSize = () => {
   const [screenSize, setScreenSize] = useState<ScreenSize>('--desktop-m'); // Изначально установим значение как 'medium'
 
   useEffect(() => {
@@ -29,14 +28,12 @@ const useScreenSize = () => {
       }
     };
 
-    calculateScreenSize(); // Вызов функции при монтировании компонента
-    window.addEventListener('resize', calculateScreenSize); // Добавим слушатель на изменение размера окна
+    calculateScreenSize();
+    window.addEventListener('resize', calculateScreenSize);
     return () => {
       window.removeEventListener('resize', calculateScreenSize);
-    }; // Очистим слушатель при размонтировании компонента
-  }, []); // Пустой массив зависимостей, чтобы хук срабатывал только один раз при монтировании компонента
+    };
+  }, []);
 
   return screenSize;
 };
-
-export default useScreenSize;
