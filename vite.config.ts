@@ -12,7 +12,7 @@ export default defineConfig({
       },
     }),
   ],
-  base: '/my-vite-cv/',
+  base: '/semenoff.dev/',
   build: {
     outDir: 'dist',
   },

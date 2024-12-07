@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "build": "tsc -b && vite build",
     "deploy": "vite build && gh-pages -d dist",
-    "open-github-pages": "npx open-cli https://semenovdemyan.github.io/my-vite-cv/"
+    "open-github-pages": "npx open-cli https://semenovdemyan.github.io/semenoff.dev/"
   },
   "dependencies": {
     "expo": "^51.0.38",
