@@ -1,10 +1,14 @@
 :root {
-  --color1: #111;
+  --color1: #181818;
   --color1-active: #3b3b3b;
   --color2: #d1ffd4c7;
   --color2-active: #92d896c7;
   --color3: #0efcd4a1;
   --color3-active: #92d896c7;
+}
+
+html {
+  background-color: var(--color1);
 }
 
 .container {
@@ -35,7 +39,4 @@
   .video {
     display: none;
   }
-}
-#root {
-  padding: 0 70px;
 }

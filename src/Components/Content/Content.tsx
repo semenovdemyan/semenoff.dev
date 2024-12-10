@@ -14,7 +14,6 @@ interface ContentProps {
 export const Content: FC<ContentProps> = ({ currentPage, lang }) => {
   const contentRef = useRef<HTMLDivElement>(null);
 
-  // Объект страниц
   const pages = {
     Start: <Start lang={lang} />,
     Me: <Me lang={lang} />,
@@ -30,7 +29,7 @@ export const Content: FC<ContentProps> = ({ currentPage, lang }) => {
         { opacity: 1, duration: 0.3 }
       );
     }
-  }, [currentPage]); // Перезапуск анимации при смене страницы
+  }, [currentPage]);
 
   return (
     <div className={styles.content} ref={contentRef}>

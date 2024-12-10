@@ -46,17 +46,17 @@ export const MySkills: React.FC<MySkillsProps> = ({ lang }) => {
         ) : (
           <div>
             {lang === 'ru' ? (
-              <div>
+              <p className={styles.descr}>
                 Пока мобильная версия и контент находятся в разработке, вы
-                можете навести курсор на навык, чтобы узнать о его пользе
-                для веб-разработчика.
-              </div>
+                можете навести курсор на навык, чтобы узнать о его пользе для
+                веб-разработчика.
+              </p>
             ) : (
-              <div>
+              <p className={styles.descr}>
                 While the mobile version and content are under development, you
                 can hover over a skill to learn about its usefulness for a web
                 developer.
-              </div>
+              </p>
             )}
           </div>
         )}

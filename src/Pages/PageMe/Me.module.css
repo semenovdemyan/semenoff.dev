@@ -5,12 +5,11 @@
 .textContainer {
   width: 60%;
 }
-.photoContainer {
+/* .photoContainer {
   width: 40%;
   height: auto;
-}
+} */
 .photo {
-  width: 100%;
   height: auto;
   border-radius: 15px;
   border-top-left-radius: 25px;
@@ -21,8 +20,20 @@
   background-size: cover;
   background-position: center;
   min-width: 280px;
+  max-width: 400px;
+  max-height: 400px;
 }
-.blurLoad {
+/* .blurLoad {
   background-size: cover;
   background-position: center;
+} */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 50px;
+  }
+  .textContainer {
+    width: 100%;
+  }
 }

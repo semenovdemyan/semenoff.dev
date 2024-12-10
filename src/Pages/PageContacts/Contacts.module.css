@@ -5,7 +5,6 @@
   display: flex;
   flex-wrap: wrap;
 }
-
 .contactsWrapper {
   display: flex;
   justify-content: space-between;
@@ -16,19 +15,11 @@
   padding: 0 20px;
   flex-wrap: wrap;
 }
-
 .contactsFormWrapper,
 .contactsContentWrapper {
   display: inline-block;
   margin-bottom: 40px;
 }
-
-/* @media (max-width: 440px) {
-  .contactsFormWrapper {
-    max-width: 100%;
-  }
-} */
-
 a {
   margin-bottom: 34px;
   color: var(--color2);
@@ -36,7 +27,6 @@ a {
   text-decoration: none;
   transition: color 0.5s ease;
 }
-
 a::after {
   content: '';
   position: absolute;
@@ -52,15 +42,6 @@ a::after {
     height 0.5s ease,
     background-color 0.5s ease;
 }
-
 a:hover::after {
   transform: scaleX(1);
-}
-
-a:active::after {
-  background-color: var(--highlight-color);
-}
-
-a:active {
-  color: var(--highlight-color);
 }

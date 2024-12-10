@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import { Button } from '../Button/Button';
 import styles from './Header.module.css';
 import { LangToggle } from '../../Components/LangToggle/Langtoggle';
@@ -12,12 +12,27 @@ interface HeaderProps {
 }
 
 export const Header: FC<HeaderProps> = ({ lang, setLang, setCurrentPage }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen((prev: boolean) => !prev);
+  };
+
   return (
     <div className={styles['header-container']}>
       <div className={styles['header-buttons']}>
         <nav>
+          <button
+            // className={`${styles.burger} ${isMenuOpen ? styles.open : styles.burger}`}
+            className={`${styles.burger} ${isMenuOpen ? styles.burgerOpen : styles.burgerClose}`}
+            onClick={toggleMenu}
+          >
+            <span className={styles.burgerLine}></span>
+            <span className={styles.burgerLine}></span>
+            <span className={styles.burgerLine}></span>
+          </button>
           <Button
-            className={styles.start}
+            className={`${styles.start} ${styles.nav_btn}`}
             label={
               <svg width="30" height="30" viewBox="0 0 51 51">
                 <path
