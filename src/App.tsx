@@ -15,9 +15,9 @@ export const App: React.FC = () => {
   const [lang, setLang] = useState<'en' | 'ru'>('ru');
 
   return (
-    <div className={styles.mainWrapper}>
+    <div className={styles.app__wrapper}>
       {screenSize !== '--mobile' && <VideoWithDelay />}
-      <div className={styles.container}>
+      <div className={styles.app__container}>
         <Header lang={lang} setLang={setLang} setCurrentPage={setCurrentPage} />
         <Content currentPage={currentPage} lang={lang} />
         <Footer />

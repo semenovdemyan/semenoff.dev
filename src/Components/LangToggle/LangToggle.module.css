@@ -1,12 +1,19 @@
 .langToggle {
-  right: 100px;
+  position: absolute;
+  right: 40px;
   flex-direction: column;
   padding: 14px 0;
   line-height: normal;
 }
+@media (max-width: 1024px) {
+  .langToggle {
+    right: 0;
+  }
+}
 @media (max-width: 767px) {
   .langToggle {
     padding: 0;
+    right: 0;
   }
 }
 

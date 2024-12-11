@@ -11,13 +11,13 @@ html {
   background-color: var(--color1);
 }
 
-.container {
+.app__container {
   width: 100%;
   color: var(--color2);
   height: 100%;
 }
 
-.main-wrapper {
+.app__wrapper {
   width: 100%;
   max-height: 100vh;
   overflow: hidden;
@@ -32,11 +32,11 @@ html {
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .video {
-    height: 115vh;
+    height: 120vh;
   }
-}
-@media (max-width: 450px) {
-  .video {
-    display: none;
+  @media (max-width: 450px) {
+    .video {
+      display: none;
+    }
   }
 }
