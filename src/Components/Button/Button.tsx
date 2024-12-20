@@ -10,7 +10,7 @@ interface ButtonProps {
   onClick?: () => void;
   onSubmit?: () => void;
   icon?: boolean;
-  children?: ReactNode; // Добавляем поддержку children
+  children?: ReactNode;
 }
 
 export const Button: React.FC<ButtonProps> = ({
@@ -21,7 +21,7 @@ export const Button: React.FC<ButtonProps> = ({
   onClick,
   onSubmit,
   icon = false,
-  children, // Деструктурируем children
+  children,
 }) => {
   const handleClick = () => {
     if (onSubmit) {
@@ -34,9 +34,7 @@ export const Button: React.FC<ButtonProps> = ({
 
   return (
     <button className={icon ? styles.icon : styles.btn} onClick={handleClick}>
-      {children || label}{' '}
-      {/* Если есть children, отобразим их, если нет - label */}
-      {lang === 'ru' ? labelRu : labelEn}
+      {children || label} {lang === 'ru' ? labelRu : labelEn}
     </button>
   );
 };

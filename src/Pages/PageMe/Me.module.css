@@ -1,17 +1,13 @@
 .container {
   display: flex;
   justify-content: space-between;
-  gap: 100px;
+  padding-bottom: 20px;
 }
 .textContainer {
   width: 60%;
 }
-/* .photoContainer {
-  width: 40%;
-  height: auto;
-} */
+
 .photo {
-  height: auto;
   border-radius: 15px;
   border-top-left-radius: 25px;
   border-bottom-right-radius: 25px;
@@ -20,14 +16,9 @@
   box-shadow: 0 0 20px 3px var(--color2);
   background-size: cover;
   background-position: center;
-  min-width: 280px;
-  max-width: 400px;
-  max-height: 400px;
+  max-width: 440px;
 }
-/* .blurLoad {
-  background-size: cover;
-  background-position: center;
-} */
+
 @media (max-width: 1024px) {
   .container {
     flex-direction: column-reverse;

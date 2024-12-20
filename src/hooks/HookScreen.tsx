@@ -1,21 +1,21 @@
 import { useState, useEffect } from 'react';
 
 type ScreenSize =
-  | '--mobile' // меньше 440px
+  | '--mobile' // меньше 768px
   | '--pad' // от 768px до 1024px
   | '--desktop-s' // от 1024px до 1440px
   | '--desktop-m' // от 1440px до 2560px
   | '--desktop-l'; // от 2560px до 3440px
 
 export const useScreenSize = () => {
-  const [screenSize, setScreenSize] = useState<ScreenSize>('--desktop-m'); // Изначально установим значение как 'medium'
+  const [screenSize, setScreenSize] = useState<ScreenSize>('--desktop-m');
 
   useEffect(() => {
     // Функция для вычисления текущего размера экрана
     const calculateScreenSize = () => {
       const width = window.innerWidth;
 
-      if (width < 440) {
+      if (width < 768) {
         setScreenSize('--mobile');
       } else if (width >= 768 && width <= 1024) {
         setScreenSize('--pad');

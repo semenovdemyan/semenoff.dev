@@ -9,10 +9,10 @@
   right: 0;
   padding: 10px;
   z-index: 1000;
+  pointer-events: none;
 }
 
 .footer-wrapper {
-
   text-align: center;
   gap: 5px;
 }
