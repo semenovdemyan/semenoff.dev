@@ -1,4 +1,4 @@
-import React from 'react';
+import { FC, useEffect, useState } from 'react';
 import './Me.module.css';
 import styles from './Me.module.css';
 import imgUrl from '../../assets/images/me.jpg';
@@ -16,9 +16,9 @@ const content = {
         мире было больше удобных и красивых интерфейсов. Мой путь в
         веб-разработке начался, когда один из моих друзей показал мне, что можно
         делать всего лишь с помощью редактора кода и домашнего ПК. С тех пор я
-        освоил множество технологий, получил первый{' '}
-        <strong>коммерческий опыт</strong>, и с удовольствием использую их для
-        воплощения креативных идей в жизнь.
+        освоил множество технологий, получил
+        <strong>&nbsp;коммерческий&nbsp;опыт</strong>, и с удовольствием
+        использую их для воплощения креативных идей в жизнь.
         <br />
         <br />
         Я верю, что пользовательский опыт — это ключ к успеху любого проекта,
@@ -65,16 +65,33 @@ const content = {
   },
 };
 
-export const Me: React.FC<{ lang: 'ru' | 'en' }> = ({ lang }) => {
+export const Me: FC<{ lang: 'ru' | 'en' }> = ({ lang }) => {
   const { description } = content[lang];
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
+
+  useEffect(() => {
+    const loadImage = new Image();
+    loadImage.src = imgUrl;
+    loadImage.onload = () => setIsImageLoaded(true);
+  }, []);
 
   return (
     <div className={styles['container']}>
       <div className={styles['textContainer']}>{description}</div>
       <div className={styles['photoContainer']}>
-        <Suspense>
+        <Suspense fallback={<div>Loading image...</div>}>
           <div className={styles['blurLoad']}>
-            <LazyImg className={styles['photo']} src={imgUrl} alt="my photo" />
+            {isImageLoaded ? (
+              <LazyImg
+                className={styles['photo']}
+                src={imgUrl}
+                alt="my photo"
+              />
+            ) : (
+              <div className={styles['loadingMessage']}>
+                Image is loading...
+              </div>
+            )}
           </div>
         </Suspense>
       </div>
