@@ -6,10 +6,10 @@
   "scripts": {
     "dev": "vite",
     "lint": "eslint .",
-    "push": "git add . && git commit -m \"update\" && git push",
     "build": "tsc -b && vite build",
-    "deploy": "vite build && gh-pages -d dist",
     "preview": "vite preview",
+    "deploy": "vite build && gh-pages -d dist",
+    "push": "git add . && git commit -m \"update\" && git push",
     "open-github-pages": "npx open-cli https://semenovdemyan.github.io/semenoff.dev/"
   },
   "dependencies": {
