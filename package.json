@@ -3,9 +3,11 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "browserslist": "> 1%, last 2 versions, Firefox ESR, not dead",
   "scripts": {
     "dev": "vite",
     "lint": "eslint .",
+    "autoprefix": "postcss src/styles/*.css --dir dist/styles --parser postcss --use postcss-nested --use postcss-preset-env --use autoprefixer",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
     "deploy": "vite build && gh-pages -d dist",
@@ -14,10 +16,15 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.5.0",
-    "expo": "^52.0.19",
+    "autoprefixer": "^10.4.20",
     "gsap": "^3.12.5",
     "lazyload": "^2.0.0-rc.2",
     "open": "^10.1.0",
+    "postcss": "^8.4.49",
+    "postcss-cli": "^11.0.0",
+    "postcss-nested": "^7.0.2",
+    "postcss-preset-env": "^10.1.3",
+    "postcss-sass": "^0.5.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-redux": "^9.2.0"
