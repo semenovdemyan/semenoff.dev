@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "vite",
     "lint": "eslint .",
-    "autoprefix": "postcss src/styles/*.css --dir dist/styles --parser postcss --use postcss-nested --use postcss-preset-env --use autoprefixer",
+    "autoprefix": "npx postcss '**/*.css' --dir dist/styles",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
     "deploy": "vite build && gh-pages -d dist",
