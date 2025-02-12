@@ -1,0 +1,16 @@
+{
+  "port": 8888,
+  "buildDirectory": "./build",
+  "engine": {
+    "launchOptions": {
+      "args": ["--no-sandbox", "--disable-setuid-sandbox"],
+      "product": "chrome",
+      "headless": true,
+      "ignoreHTTPSErrors": true
+    },
+    "gotoOptions": {
+      "timeout": 0
+    }
+  },
+  "routes": ["/", "/about", "/contacts", "/portfolios", "skills"]
+}
