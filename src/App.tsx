@@ -3,7 +3,7 @@ import { Header } from './Components/Header/Header';
 import { Content } from './Components/Content/Content';
 import { Footer } from './Components/Footer/Footer';
 import { useState } from 'react';
-import { useScreenSize } from './hooks/HookScreen';
+import { useScreenSize } from './hooks/useScreenSize';
 import './normalize.css';
 import styles from './App.module.css';
 
