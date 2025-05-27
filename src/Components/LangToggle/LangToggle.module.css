@@ -2,15 +2,16 @@
   position: absolute;
   right: 40px;
   flex-direction: column;
-  padding: 14px 0;
+  padding: 15px 0;
   line-height: normal;
 }
 @media (max-width: 1024px) {
   .langToggle {
+    padding-right: 70px;
     right: 0;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .langToggle {
     padding: 0;
     right: 0;

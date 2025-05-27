@@ -22,7 +22,6 @@ export const Header: FC<HeaderProps> = ({ lang, setLang, setCurrentPage }) => {
     setIsOpen((prev) => !prev);
   };
 
-  // ✅ Закрываем меню, если экран становится больше мобильного
   useEffect(() => {
     if (!isMobile && isOpen) {
       setIsOpen(false);
@@ -100,9 +99,9 @@ export const Header: FC<HeaderProps> = ({ lang, setLang, setCurrentPage }) => {
           />
         </nav>
 
-        <span className={styles.header__toggle}>
+        {/* <span className={styles.header__toggle}> */}
           <LangToggle lang={lang} setLang={setLang} />
-        </span>
+        {/* </span> */}
       </div>
     </div>
   );

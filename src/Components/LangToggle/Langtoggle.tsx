@@ -1,6 +1,7 @@
 import styles from './LangToggle.module.css';
 
 interface LangToggleProps {
+  className?: string;
   lang: 'en' | 'ru';
   setLang: React.Dispatch<React.SetStateAction<'en' | 'ru'>>;
 }
